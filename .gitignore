@@ -1,0 +1,16 @@
+# Local preview / editor tooling
+.claude/
+_frames/
+
+# Raw source uploads — already copied (full quality) into assets/images and assets/video.
+# These root-level originals are excluded to keep the repo clean. (Anchored to root only,
+# so assets/images/*.jpg and assets/video/*.mp4 are still tracked.)
+/*.mp4
+/*.jpg
+/*.jpeg
+/*.png
+/*.webp
+
+# OS junk
+Thumbs.db
+.DS_Store

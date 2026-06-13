@@ -1,0 +1,53 @@
+BARON GOLD — WEBSITE
+====================
+
+HOW TO OPEN
+-----------
+Double-click "index.html" to view the site in your browser.
+(For the photo/video galleries to load reliably, keep the whole "BARON GOLD"
+folder together — index.html, the other .html pages, and the css/js/assets folders.)
+
+PAGES
+-----
+index.html ............ Home
+about.html ............ About Baron Gold
+collections.html ...... Collections (gold, diamond, wedding, watches, lifestyle + galleries)
+gold-bars.html ........ Gold Bars
+custom-jewelry.html ... Custom Jewelry
+sell-gold.html ........ Sell Your Gold
+repairs.html .......... Gold Repairs
+contact.html .......... Contact + inquiry form
+
+TO CHANGE YOUR CONTACT DETAILS (one place)
+------------------------------------------
+Open  js/main.js  in Notepad. At the top, edit the BARON block:
+  whatsapp     : currently 2348165675182  (international format, no "+" or spaces)
+  phoneDisplay : +234 816 567 5182
+  email        : info@barongold.africa   <-- placeholder, change to your real email
+  instagram    : baron_gold1
+  facebook     : paste your Facebook page URL
+  location     : Lagos, Nigeria           <-- change to your real address
+
+NOTE: The WhatsApp/phone links in the page buttons are also written directly in the
+.html files as "wa.me/2348165675182". If your number is different, use Find & Replace
+(Ctrl+H) in each .html file to replace 2348165675182 with your number, and replace
+"+234 816 567 5182" with your display number.
+
+PHOTOS & VIDEOS
+---------------
+All your photos and videos live in assets/images and assets/video.
+Every photo and every video is used exactly once across the site (no repeats),
+at full original quality. To swap a photo, replace the file in assets/images with
+one of the same name.
+
+PRICING
+-------
+By design there are no fixed prices. Every product button opens WhatsApp with a
+"Request Current Price / Today's Rate" message, so you always quote the live rate.
+
+EXCLUDED IMAGES
+---------------
+Two of the supplied images were left out on purpose because they carried other
+jewelers' watermarks ("VeraLuxe Diamonds" and an Arabic shop tag), and one earlier
+image was an Instagram screenshot of a competitor ("Jameel Gold"). Using them could
+confuse your branding. The originals are still in the main folder if you want them.

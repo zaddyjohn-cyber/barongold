@@ -213,9 +213,18 @@ body.no-scroll{overflow:hidden}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line-soft)}
 .trust-item{background:var(--bg);padding:1.5rem 1.4rem;display:flex;gap:.95rem;align-items:center;transition:background .3s}
 .trust-item:hover{background:var(--panel)}
-.trust-item .ti-ico{flex:none;width:54px;height:54px;border-radius:14px;display:grid;place-items:center;border:1px solid rgba(201,162,75,.4);background:linear-gradient(135deg,#fdf7e6,#f0e1ba);box-shadow:0 8px 18px -10px rgba(201,162,75,.65),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .4s var(--ease)}
-.trust-item:hover .ti-ico{transform:translateY(-2px) scale(1.05)}
-.trust-item .ti-ico svg{width:34px;height:34px;overflow:visible}
+.trust-item .ti-ico{flex:none;width:66px;height:66px;border-radius:14px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:0 12px 24px -12px rgba(0,0,0,.7);background:var(--bg-2);transition:transform .4s var(--ease)}
+.trust-item:hover .ti-ico{transform:translateY(-2px) scale(1.06);border-color:var(--gold-2)}
+.trust-item .ti-ico img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;animation:ti-kb 12s ease-in-out infinite alternate}
+.trust-item:nth-child(2) .ti-ico img{animation-delay:-1.5s}
+.trust-item:nth-child(3) .ti-ico img{animation-delay:-3s}
+.trust-item:nth-child(4) .ti-ico img{animation-delay:-4.5s}
+.trust-item:nth-child(5) .ti-ico img{animation-delay:-6s}
+.trust-item:nth-child(6) .ti-ico img{animation-delay:-7.5s}
+.trust-item:nth-child(7) .ti-ico img{animation-delay:-9s}
+.trust-item:nth-child(8) .ti-ico img{animation-delay:-10.5s}
+@keyframes ti-kb{from{transform:scale(1.05)}to{transform:scale(1.22) translate(-4%,3%)}}
+@media (prefers-reduced-motion:reduce){.trust-item .ti-ico img{animation:none}}
 .trust-item h4{font-family:var(--ff-body);font-size:.92rem;font-weight:600;color:var(--ivory);margin-bottom:.2rem}
 .trust-item p{font-size:.8rem;color:var(--muted);line-height:1.45}
 

@@ -314,7 +314,8 @@ body.no-scroll{overflow:hidden}
   border:1px solid var(--line);background:var(--bg-2);
   box-shadow:0 14px 28px -14px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.05);transition:transform .45s var(--ease),border-color .45s}
 .why-card:hover .why-anim-tile{transform:translateY(-3px) scale(1.05);border-color:var(--gold-2)}
-.why-anim-tile img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;animation:wt-kb 14s ease-in-out infinite alternate}
+.why-anim-tile img,.why-anim-tile video{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;animation:wt-kb 14s ease-in-out infinite alternate}
+.why-anim-tile video{animation:none}
 .why-card:nth-child(2) .why-anim-tile img{animation-delay:-2s}
 .why-card:nth-child(3) .why-anim-tile img{animation-delay:-4s}
 .why-card:nth-child(4) .why-anim-tile img{animation-delay:-6s}

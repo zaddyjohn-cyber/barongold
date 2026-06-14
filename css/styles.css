@@ -211,10 +211,11 @@ body.no-scroll{overflow:hidden}
    ============================================================ */
 .trust-band{border-block:1px solid var(--line-soft);background:linear-gradient(180deg,var(--bg-2),var(--bg))}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line-soft)}
-.trust-item{background:var(--bg);padding:1.5rem 1.4rem;display:flex;gap:.95rem;align-items:flex-start;transition:background .3s}
+.trust-item{background:var(--bg);padding:1.5rem 1.4rem;display:flex;gap:.95rem;align-items:center;transition:background .3s}
 .trust-item:hover{background:var(--panel)}
-.trust-item .ti-ico{flex:none;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;border:1px solid var(--line);color:var(--gold-2);background:rgba(201,162,75,.06)}
-.trust-item .ti-ico svg{width:20px;height:20px}
+.trust-item .ti-ico{flex:none;width:54px;height:54px;border-radius:14px;display:grid;place-items:center;border:1px solid rgba(201,162,75,.4);background:linear-gradient(135deg,#fdf7e6,#f0e1ba);box-shadow:0 8px 18px -10px rgba(201,162,75,.65),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .4s var(--ease)}
+.trust-item:hover .ti-ico{transform:translateY(-2px) scale(1.05)}
+.trust-item .ti-ico svg{width:34px;height:34px;overflow:visible}
 .trust-item h4{font-family:var(--ff-body);font-size:.92rem;font-weight:600;color:var(--ivory);margin-bottom:.2rem}
 .trust-item p{font-size:.8rem;color:var(--muted);line-height:1.45}
 
@@ -326,7 +327,9 @@ body.no-scroll{overflow:hidden}
 @keyframes wa-grow{0%,100%{transform:scaleY(.35)}50%{transform:scaleY(1)}}
 .wa-pop{transform-box:fill-box;transform-origin:center;animation:wa-pop 3.4s ease-in-out infinite;animation-delay:var(--d,0s)}
 @keyframes wa-pop{0%{transform:scale(.2);opacity:0}14%{transform:scale(1.12);opacity:1}24%{transform:scale(1)}86%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}
-@media (prefers-reduced-motion:reduce){.wa-bob,.wa-spin,.wa-orbit,.wa-tw,.wa-dot,.wa-draw,.wa-pulse,.wa-float,.wa-rock,.wa-grow,.wa-pop{animation:none}.wa-draw{stroke-dashoffset:0}}
+.wa-wiggle{transform-box:view-box;transform-origin:24px 24px;animation:wa-wiggle 2.4s ease-in-out infinite}
+@keyframes wa-wiggle{0%,100%{transform:rotate(-11deg)}50%{transform:rotate(11deg)}}
+@media (prefers-reduced-motion:reduce){.wa-bob,.wa-spin,.wa-orbit,.wa-tw,.wa-dot,.wa-draw,.wa-pulse,.wa-float,.wa-rock,.wa-grow,.wa-pop,.wa-wiggle{animation:none}.wa-draw{stroke-dashoffset:0}}
 
 /* ============================================================
    STAT / BANNER (gold)

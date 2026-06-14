@@ -665,7 +665,7 @@ body.no-scroll{overflow:hidden}
 .orbit-hub small{font-size:.48rem;letter-spacing:.2em;color:var(--gold-2);text-transform:uppercase}
 
 .orbit-wrap{position:absolute;inset:0;display:grid;place-items:center;z-index:4}
-.orbit{position:relative;width:1px;height:1px;animation:orbit-spin var(--spin) linear infinite;will-change:transform;transform:translateZ(0)}
+.orbit{position:relative;width:1px;height:1px;animation:orbit-spin var(--spin) linear infinite;will-change:transform}
 .orbit-item{
   position:absolute;top:0;left:0;width:var(--cw);height:var(--ch);
   margin:calc(var(--ch)/-2) 0 0 calc(var(--cw)/-2);

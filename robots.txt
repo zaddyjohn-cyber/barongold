@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_frames/
+Disallow: /.claude/
+
+Sitemap: https://zaddyjohn-cyber.github.io/barongold/sitemap.xml

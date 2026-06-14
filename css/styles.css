@@ -722,3 +722,38 @@ body.no-scroll{overflow:hidden}
 @media (max-width:980px){ .orbit-scene{--r:126px;--cw:84px;--ch:104px} }
 @media (max-width:560px){ .orbit-scene{--r:104px;--cw:70px;--ch:86px} .orbit-eyebrow{font-size:.58rem;letter-spacing:.16em} }
 @media (prefers-reduced-motion:reduce){ .orbit,.ocard{animation:none!important} }
+
+/* ============================================================
+   MOBILE POLISH · A11Y · PERF
+   ============================================================ */
+/* prevent horizontal overflow from any wide media on mobile */
+html{overflow-x:hidden}
+img,video,svg{max-width:100%}
+/* keep lazy-loaded images visible in unsupported browsers */
+img[loading="lazy"]{background:var(--bg-2)}
+
+/* iOS safe-area for the floating WhatsApp button */
+.fab-wa{bottom:max(clamp(1rem,3vw,1.8rem),env(safe-area-inset-bottom,0px));right:max(clamp(1rem,3vw,1.8rem),env(safe-area-inset-right,0px))}
+
+/* ensure 44x44 minimum tap targets on key controls (WCAG / iOS HIG) */
+.faq-q,.nav-toggle,.mn-close{min-height:48px}
+.main-nav a{min-height:44px;display:inline-flex;align-items:center}
+.btn{min-height:44px}
+
+/* respect dynamic viewport on mobile browsers with collapsing url bar */
+@supports (height:100svh){ .hero{min-height:100svh} .stage{min-height:100svh} }
+
+/* sharper focus rings for keyboard users (a11y) */
+:focus-visible{outline:2px solid var(--gold-2);outline-offset:3px;border-radius:6px}
+.btn:focus-visible,.faq-q:focus-visible{outline-offset:4px}
+
+/* narrow-phone hero typography tweak — keep the bold serif readable, not crushed */
+@media (max-width:380px){
+  .hero h1,.page-hero h1{font-size:1.95rem;line-height:1.08}
+  .hero .lede{font-size:.95rem}
+  .section-title{font-size:1.7rem}
+  .container{padding-inline:1rem}
+}
+
+/* contain layout shift while images load (works alongside width/height attrs) */
+.card-media,.split-media,.feature-img,.hero-center,.ti-ico,.why-anim-tile,.faq-rail a,.gallery figure,.explore-card,.vid{contain:layout paint}

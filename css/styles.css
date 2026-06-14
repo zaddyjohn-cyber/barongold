@@ -310,10 +310,18 @@ body.no-scroll{overflow:hidden}
 .why-card p{font-size:.9rem;color:#615c52}
 
 /* animated graphic tile */
-.why-anim-tile{width:90px;height:90px;border-radius:20px;display:grid;place-items:center;margin-bottom:1.2rem;
-  background:linear-gradient(135deg,#fdf7e6,#f0e1ba);border:1px solid rgba(201,162,75,.45);
-  box-shadow:0 12px 26px -12px rgba(201,162,75,.75),inset 0 1px 0 rgba(255,255,255,.6);transition:transform .45s var(--ease)}
-.why-card:hover .why-anim-tile{transform:translateY(-3px) scale(1.05) rotate(-2deg)}
+.why-anim-tile{width:90px;height:90px;border-radius:20px;overflow:hidden;position:relative;margin-bottom:1.2rem;
+  border:1px solid var(--line);background:var(--bg-2);
+  box-shadow:0 14px 28px -14px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.05);transition:transform .45s var(--ease),border-color .45s}
+.why-card:hover .why-anim-tile{transform:translateY(-3px) scale(1.05);border-color:var(--gold-2)}
+.why-anim-tile img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform;animation:wt-kb 14s ease-in-out infinite alternate}
+.why-card:nth-child(2) .why-anim-tile img{animation-delay:-2s}
+.why-card:nth-child(3) .why-anim-tile img{animation-delay:-4s}
+.why-card:nth-child(4) .why-anim-tile img{animation-delay:-6s}
+.why-card:nth-child(5) .why-anim-tile img{animation-delay:-8s}
+.why-card:nth-child(6) .why-anim-tile img{animation-delay:-10s}
+@keyframes wt-kb{from{transform:scale(1.06)}to{transform:scale(1.24) translate(-4%,3%)}}
+@media (prefers-reduced-motion:reduce){.why-anim-tile img{animation:none}}
 .wa{width:58px;height:58px;display:block;overflow:visible}
 
 .wa-bob{animation:wa-bob 3.2s ease-in-out infinite}

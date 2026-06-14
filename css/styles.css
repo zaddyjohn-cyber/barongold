@@ -660,7 +660,7 @@ body.no-scroll{overflow:hidden}
    ============================================================ */
 .orbit-scene{
   --r:166px;--cw:104px;--ch:128px;--spin:40s;
-  position:absolute;inset:0;overflow:hidden;
+  position:absolute;inset:0;overflow:hidden;isolation:isolate;
   background:radial-gradient(circle at 50% 48%,#1f3a8a 0%,#15276b 45%,#0a1640 100%);
 }
 .orbit-eyebrow{
@@ -702,7 +702,7 @@ body.no-scroll{overflow:hidden}
   position:relative;display:block;width:100%;height:100%;border-radius:15px;overflow:hidden;
   border:1px solid rgba(255,255,255,.14);background:#15120f;
   box-shadow:0 16px 36px -16px rgba(0,0,0,.75);
-  animation:orbit-spin-rev var(--spin) linear infinite;will-change:transform;transform:translateZ(0);
+  animation:orbit-spin-rev var(--spin) linear infinite;will-change:transform;
 }
 .ocard img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .ocard:hover img{transform:scale(1.08)}
